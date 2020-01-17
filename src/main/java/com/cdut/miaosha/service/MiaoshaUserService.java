@@ -3,11 +3,18 @@ package com.cdut.miaosha.service;
 import com.cdut.miaosha.dao.MiaoshaUserDao;
 import com.cdut.miaosha.entity.MiaoshaUser;
 import com.cdut.miaosha.exception.GlobalException;
+import com.cdut.miaosha.redis.MiaoshaUserKey;
+import com.cdut.miaosha.redis.RedisService;
 import com.cdut.miaosha.result.CodeMsg;
 import com.cdut.miaosha.util.MD5Util;
+import com.cdut.miaosha.util.UUIDUtil;
 import com.cdut.miaosha.vo.LoginVo;
+import com.mysql.cj.util.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author ：yinmy
@@ -16,14 +23,32 @@ import org.springframework.stereotype.Service;
 @Service
 public class MiaoshaUserService {
 
+    public static final String COOKIE_NAME_TOKEN = "token";
+
     @Autowired
     MiaoshaUserDao miaoshaUserDao;
+
+    @Autowired
+    RedisService redisService;
 
     public MiaoshaUser getById(long id){
         return miaoshaUserDao.getById(id);
     }
 
-    public boolean login(LoginVo loginVo) {
+    public MiaoshaUser getByToken(HttpServletResponse response,String token) {
+        if(StringUtils.isEmptyOrWhitespaceOnly(token)){
+            return null;
+        }
+        //先不返回，延长下有效期
+        MiaoshaUser miaoshaUser = redisService.get(MiaoshaUserKey.token,token,MiaoshaUser.class);
+        //判断用户是否为空
+        if(miaoshaUser!=null){
+            addCookie(response,miaoshaUser);
+
+        }
+        return miaoshaUser;
+    }
+    public boolean login(HttpServletResponse response,LoginVo loginVo) {
         if(loginVo == null){
             throw new GlobalException(CodeMsg.SERVER_ERROR);
         }
@@ -41,6 +66,20 @@ public class MiaoshaUserService {
         if(!calcpass.equals(dbPass)){
             throw new GlobalException( CodeMsg.PASSWORD_ERROR);
         }
+
+        //生成cookie
+        addCookie(response,user);
         return true;
     }
+
+    private void addCookie(HttpServletResponse response,MiaoshaUser user){
+
+        String token = UUIDUtil.uuid();
+        redisService.set(MiaoshaUserKey.token,token,user);
+        Cookie cookie = new Cookie(COOKIE_NAME_TOKEN,token);
+        cookie.setMaxAge(MiaoshaUserKey.token.expireSeconds());
+        cookie.setPath("/");
+        response.addCookie(cookie);
+    }
+
 }
