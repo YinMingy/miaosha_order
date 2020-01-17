@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="163b0705-6c7b-4ad5-b298-1b0ac91d2529" name="Default Changelist" comment="" />
+    <list default="true" id="163b0705-6c7b-4ad5-b298-1b0ac91d2529" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/exception/GlobalException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,6 +171,8 @@
       <workItem from="1579067638314" duration="10880000" />
       <workItem from="1579140600296" duration="972000" />
       <workItem from="1579154738333" duration="9682000" />
+      <workItem from="1579225580663" duration="201000" />
+      <workItem from="1579227844735" duration="4394000" />
     </task>
     <servers />
   </component>
@@ -168,46 +180,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1579163237197">
+    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1579232092595">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1579163237197" />
-    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1578964330210">
+    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1579232092595" />
+    <state x="421" y="99" key="FileChooserDialogImpl" timestamp="1579225765934">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1578964330210" />
-    <state width="1238" height="204" key="GridCell.Tab.0.bottom" timestamp="1579164434539">
+    <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1579225765934" />
+    <state width="1238" height="177" key="GridCell.Tab.0.bottom" timestamp="1579232636744">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
-    <state width="1238" height="204" key="GridCell.Tab.0.center" timestamp="1579164434539">
+    <state width="1238" height="177" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579232636744" />
+    <state width="1238" height="177" key="GridCell.Tab.0.center" timestamp="1579232636743">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
-    <state width="1238" height="204" key="GridCell.Tab.0.left" timestamp="1579164434539">
+    <state width="1238" height="177" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579232636743" />
+    <state width="1238" height="177" key="GridCell.Tab.0.left" timestamp="1579232636743">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
-    <state width="1238" height="204" key="GridCell.Tab.0.right" timestamp="1579164434539">
+    <state width="1238" height="177" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579232636743" />
+    <state width="1238" height="177" key="GridCell.Tab.0.right" timestamp="1579232636743">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
-    <state width="1238" height="204" key="GridCell.Tab.1.bottom" timestamp="1579164434539">
+    <state width="1238" height="177" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579232636743" />
+    <state width="1238" height="177" key="GridCell.Tab.1.bottom" timestamp="1579232636744">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
-    <state width="1238" height="204" key="GridCell.Tab.1.center" timestamp="1579164434539">
+    <state width="1238" height="177" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579232636744" />
+    <state width="1238" height="177" key="GridCell.Tab.1.center" timestamp="1579232636744">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
-    <state width="1238" height="204" key="GridCell.Tab.1.left" timestamp="1579164434539">
+    <state width="1238" height="177" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1579232636744" />
+    <state width="1238" height="177" key="GridCell.Tab.1.left" timestamp="1579232636744">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
-    <state width="1238" height="204" key="GridCell.Tab.1.right" timestamp="1579164434539">
+    <state width="1238" height="177" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1579232636744" />
+    <state width="1238" height="177" key="GridCell.Tab.1.right" timestamp="1579232636744">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1579164434539" />
+    <state width="1238" height="177" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1579232636744" />
     <state width="1238" height="204" key="GridCell.Tab.2.bottom" timestamp="1579164434540">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -240,10 +252,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="com.intellij.troubleshooting.ui.CollectTroubleshootingInformationDialog/0.0.1280.680@0.0.1280.680" timestamp="1578993326022" />
-    <state x="14" y="0" key="new project wizard" timestamp="1579142276979">
+    <state x="-50" y="85" key="new project wizard" timestamp="1579225779318">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="14" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1579142276979" />
+    <state x="-50" y="85" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1579225779318" />
     <state x="778" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1579162461880">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -261,11 +273,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/SampleController.java</url>
           <line>52</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
