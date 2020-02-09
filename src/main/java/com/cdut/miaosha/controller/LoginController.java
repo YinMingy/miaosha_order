@@ -30,15 +30,13 @@ public class LoginController {
     MiaoshaUserService miaoshaUserService;
 
     @RequestMapping("/to_login")
-    public String toLogin(Model model){
-
+    public String toLogin(){
         return "login";
     }
 
     @RequestMapping("/do_login")
     @ResponseBody
     public Result<Boolean> doLogin(HttpServletResponse response, @Valid LoginVo loginVo){
-
         logger.info(loginVo.toString());
         miaoshaUserService.login(response,loginVo);
         return Result.success(true);
