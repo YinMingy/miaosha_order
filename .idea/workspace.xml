@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163b0705-6c7b-4ad5-b298-1b0ac91d2529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/Interceptor/LoginInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/LoginConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/result/TokenResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/result/UserResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/util/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/util/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/Interceptor/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/Interceptor/LoginInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/result/Result.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +186,9 @@
       <workItem from="1581491610253" duration="3242000" />
       <workItem from="1581563228355" duration="8862000" />
       <workItem from="1581602257073" duration="1473000" />
-      <workItem from="1581658242777" duration="265000" />
+      <workItem from="1581658242777" duration="1642000" />
+      <workItem from="1581677041780" duration="12902000" />
+      <workItem from="1581733531009" duration="14654000" />
     </task>
     <servers />
   </component>
@@ -190,10 +196,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1581563515381">
+    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1581746786379">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1581563515381" />
+    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1581746786379" />
     <state x="0" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580198196956">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -202,38 +208,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1579241365566" />
-    <state width="1238" height="125" key="GridCell.Tab.0.bottom" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.0.bottom" timestamp="1581747290109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
-    <state width="1238" height="125" key="GridCell.Tab.0.center" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581747290109" />
+    <state width="1204" height="222" key="GridCell.Tab.0.center" timestamp="1581747290109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
-    <state width="1238" height="125" key="GridCell.Tab.0.left" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1581747290109" />
+    <state width="1204" height="222" key="GridCell.Tab.0.left" timestamp="1581747290109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
-    <state width="1238" height="125" key="GridCell.Tab.0.right" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1581747290109" />
+    <state width="1204" height="222" key="GridCell.Tab.0.right" timestamp="1581747290109">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
-    <state width="1238" height="125" key="GridCell.Tab.1.bottom" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1581747290109" />
+    <state width="1204" height="222" key="GridCell.Tab.1.bottom" timestamp="1581747290110">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
-    <state width="1238" height="125" key="GridCell.Tab.1.center" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1581747290110" />
+    <state width="1204" height="222" key="GridCell.Tab.1.center" timestamp="1581747290110">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
-    <state width="1238" height="125" key="GridCell.Tab.1.left" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1581747290110" />
+    <state width="1204" height="222" key="GridCell.Tab.1.left" timestamp="1581747290110">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
-    <state width="1238" height="125" key="GridCell.Tab.1.right" timestamp="1581607261155">
+    <state width="1204" height="222" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1581747290110" />
+    <state width="1204" height="222" key="GridCell.Tab.1.right" timestamp="1581747290110">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="125" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1581607261155" />
+    <state width="1204" height="222" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1581747290110" />
     <state width="1238" height="204" key="GridCell.Tab.2.bottom" timestamp="1579164434540">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -278,10 +284,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1580196806345" />
-    <state x="780" y="3" width="672" height="678" key="search.everywhere.popup" timestamp="1581493831141">
+    <state x="784" y="6" width="672" height="678" key="search.everywhere.popup" timestamp="1581746917751">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="780" y="3" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1581493831141" />
+    <state x="784" y="6" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1581746917751" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

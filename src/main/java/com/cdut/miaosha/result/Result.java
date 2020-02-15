@@ -4,6 +4,7 @@ package com.cdut.miaosha.result;
  * @author ：yinmy
  * @date ：Created on 2020/1/13 17:11
  */
+
 public class Result<T> {
 
     private int code;
@@ -39,7 +40,6 @@ public class Result<T> {
             this.msg = codeMsg.getMsg();
         }
     }
-
 
     public int getCode() {
         return code;

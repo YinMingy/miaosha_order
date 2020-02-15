@@ -20,12 +20,10 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //System.out.println("执行了LoginInterceptor的preHandle方法");
         try{
-            //统一拦截（查询当前session是否存在user(这里user会在每次登录成功后，写入session
-            MiaoshaUser user = (MiaoshaUser)request.getSession().getAttribute("token");
-            if(user != null){
-                return true;
-            }
-            response.sendRedirect("http://47.96.187.200/");
+            long timestamp = System.currentTimeMillis();
+            response.sendRedirect("http://47.96.187.200/profile/oauth2/authorize?client_id=WdRq4UAMjB" +
+                    "&response_type=code&redirect_uri=http://localhost:8080/login/do_login&oauth_timestamp="+timestamp);
+            System.out.println("创建code的时间戳是"+timestamp);
         }catch (IOException e){
             e.printStackTrace();
         }
