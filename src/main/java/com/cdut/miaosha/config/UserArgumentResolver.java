@@ -23,37 +23,37 @@ import javax.servlet.http.HttpServletResponse;
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {
 
     @Autowired
-    MiaoshaUserService miaoshaUserService;
+    MiaoshaUserService userService;
 
-    @Override
-    public boolean supportsParameter(MethodParameter methodParameter) {
-        Class<?> clazz = methodParameter.getParameterType();
-        return clazz == MiaoshaUser.class;
+    public boolean supportsParameter(MethodParameter parameter) {
+        Class<?> clazz = parameter.getParameterType();
+        return clazz==MiaoshaUser.class;
     }
 
-    @Override
-    public Object resolveArgument(MethodParameter methodParameter, ModelAndViewContainer modelAndViewContainer, NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory) throws Exception {
-        HttpServletRequest request = nativeWebRequest.getNativeRequest(HttpServletRequest.class);
-        HttpServletResponse response = nativeWebRequest.getNativeResponse(HttpServletResponse.class);
+    public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
+                                  NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
+        HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
+        HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
 
         String paramToken = request.getParameter(MiaoshaUserService.COOKIE_NAME_TOKEN);
-        String cookieToken = getCookieValue(request,MiaoshaUserService.COOKIE_NAME_TOKEN);
-        if(StringUtils.isEmptyOrWhitespaceOnly(cookieToken)&&StringUtils.isEmptyOrWhitespaceOnly(paramToken)){
+        String cookieToken = getCookieValue(request, MiaoshaUserService.COOKIE_NAME_TOKEN);
+        if(StringUtils.isNullOrEmpty(cookieToken) && StringUtils.isNullOrEmpty(paramToken)) {
             return null;
         }
-        String token = StringUtils.isEmptyOrWhitespaceOnly(paramToken)?cookieToken:paramToken;
-        return miaoshaUserService.getByToken(response,token);
-
+        String token = StringUtils.isNullOrEmpty(paramToken)?cookieToken:paramToken;
+        return userService.getByToken(response, token);
     }
 
-    private String getCookieValue(HttpServletRequest request, String cookieNameToken) {
-        Cookie[] cookies = request.getCookies();
-        for(Cookie cookie:cookies){
-            if(cookie.getName() == cookieNameToken){
+    private String getCookieValue(HttpServletRequest request, String cookiName) {
+        Cookie[]  cookies = request.getCookies();
+        for(Cookie cookie : cookies) {
+            if(cookie.getName().equals(cookiName)) {
                 return cookie.getValue();
             }
         }
         return null;
     }
+
 }
+
 

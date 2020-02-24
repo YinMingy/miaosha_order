@@ -1,9 +1,11 @@
 package com.cdut.miaosha.vo;
 
 import com.cdut.miaosha.entity.Goods;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
+@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 public class GoodsVo extends Goods {
     private Double miaoshaPrice;
     private Integer stockCount;

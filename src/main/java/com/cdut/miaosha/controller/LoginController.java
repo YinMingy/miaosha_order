@@ -47,9 +47,9 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping("/do_login")
+    @RequestMapping("/callback")
     @ResponseBody
-    public String doLogin(HttpServletRequest request,HttpServletResponse response){// @Valid LoginVo loginVo) Result<Boolean>
+    public String callback(HttpServletRequest request,HttpServletResponse response){// @Valid LoginVo loginVo) Result<Boolean>
 
         String code = request.getParameter("code");
         System.out.println("得到的code是"+code);
@@ -77,11 +77,17 @@ public class LoginController {
         } catch (KeyManagementException e) {
             e.printStackTrace();
         }
-        //miaoshaUserService.login(response,loginVo);
-        //return Result.success(true);
         return "登录失败";
     }
 
+    @RequestMapping("/do_login")
+    @ResponseBody
+    public Result<Boolean> doLogin(HttpServletResponse response,@Valid LoginVo loginVo){
+
+        miaoshaUserService.login(response,loginVo);
+        return Result.success(true);
+
+    }
 
     private static String getResultByHttp(String sendUrl, String param)
             throws NoSuchAlgorithmException, KeyManagementException,
