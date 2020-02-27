@@ -32,11 +32,14 @@ public class GoodsController {
     @Autowired
     GoodsService goodsService;
 
+    /**
+     * 未优化前： QPS——2207
+     * 5000 * 10
+     */
     @RequestMapping("/to_list")
     public String toList(Model model,MiaoshaUser user){
 
         model.addAttribute("user",user);
-        System.out.println(user.getId());
         List<GoodsVo> goodsVos = goodsService.listGoodsVo();
         model.addAttribute("goodsList",goodsVos);
         return "goods_list";

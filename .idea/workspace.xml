@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163b0705-6c7b-4ad5-b298-1b0ac91d2529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/MiaoshaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/template/miaosha_fail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/template/order_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/util/DBUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/util/UserUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/GoodsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/template/hello.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/template/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/UserArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/service/MiaoshaUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/service/MiaoshaUserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\respository" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.1" />
         <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
@@ -78,19 +79,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/template" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/util" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.cdut.miaosha.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProject\miaosha_order\src\main\java\com\cdut\miaosha\util" />
       <recent name="E:\IdeaProject\miaosha_order\src\main\resources\template" />
       <recent name="E:\IdeaProject\miaosha_order\src\main\resources" />
     </key>
@@ -98,6 +100,19 @@
   <component name="RunManager" selected="Spring Boot.MainApplication">
     <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cdut.miaosha.util.MD5Util" />
+      <module name="miaosha_order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cdut.miaosha.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cdut.miaosha.util.UserUtil" />
       <module name="miaosha_order" />
       <extension name="coverage">
         <pattern>
@@ -140,11 +155,13 @@
     <list>
       <item itemvalue="Application.MD5Util" />
       <item itemvalue="Application.VaildatorUil" />
+      <item itemvalue="Application.UserUtil" />
       <item itemvalue="Spring Boot.MainApplication" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MainApplication" />
+        <item itemvalue="Application.UserUtil" />
         <item itemvalue="Application.MD5Util" />
         <item itemvalue="Application.VaildatorUil" />
       </list>
@@ -206,6 +223,7 @@
       <workItem from="1581989911094" duration="352000" />
       <workItem from="1582102285441" duration="622000" />
       <workItem from="1582507792371" duration="20232000" />
+      <workItem from="1582693699198" duration="6548000" />
     </task>
     <servers />
   </component>
@@ -213,10 +231,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582519066208">
+    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582706165522">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1582519066208" />
+    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1582706165522" />
     <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1581746786379">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -229,38 +247,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581990261744" />
-    <state width="1238" height="225" key="GridCell.Tab.0.bottom" timestamp="1582533415878">
+    <state width="1238" height="228" key="GridCell.Tab.0.bottom" timestamp="1582708832400">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
-    <state width="1238" height="225" key="GridCell.Tab.0.center" timestamp="1582533415877">
+    <state width="1238" height="228" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582708832400" />
+    <state width="1238" height="228" key="GridCell.Tab.0.center" timestamp="1582708832399">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582533415877" />
-    <state width="1238" height="225" key="GridCell.Tab.0.left" timestamp="1582533415877">
+    <state width="1238" height="228" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582708832399" />
+    <state width="1238" height="228" key="GridCell.Tab.0.left" timestamp="1582708832399">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582533415877" />
-    <state width="1238" height="225" key="GridCell.Tab.0.right" timestamp="1582533415877">
+    <state width="1238" height="228" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582708832399" />
+    <state width="1238" height="228" key="GridCell.Tab.0.right" timestamp="1582708832399">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582533415877" />
-    <state width="1238" height="225" key="GridCell.Tab.1.bottom" timestamp="1582533415878">
+    <state width="1238" height="228" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582708832399" />
+    <state width="1238" height="202" key="GridCell.Tab.1.bottom" timestamp="1582708832376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
-    <state width="1238" height="225" key="GridCell.Tab.1.center" timestamp="1582533415878">
+    <state width="1238" height="202" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
+    <state width="1238" height="202" key="GridCell.Tab.1.center" timestamp="1582708832376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
-    <state width="1238" height="225" key="GridCell.Tab.1.left" timestamp="1582533415878">
+    <state width="1238" height="202" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
+    <state width="1238" height="202" key="GridCell.Tab.1.left" timestamp="1582708832376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
-    <state width="1238" height="225" key="GridCell.Tab.1.right" timestamp="1582533415878">
+    <state width="1238" height="202" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
+    <state width="1238" height="202" key="GridCell.Tab.1.right" timestamp="1582708832376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
+    <state width="1238" height="202" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
     <state width="1238" height="225" key="GridCell.Tab.2.bottom" timestamp="1582533415879">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -285,10 +303,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="379" y="194" key="MavenRunHelper.GoalEditor/0.0.1280.680@0.0.1280.680" timestamp="1579160123997" />
-    <state x="122" y="0" key="SettingsEditor" timestamp="1581944709322">
+    <state x="122" y="0" key="SettingsEditor" timestamp="1582693716414">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="122" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581944709322" />
+    <state x="122" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1582693716414" />
     <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580195202079">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
