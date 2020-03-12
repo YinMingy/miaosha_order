@@ -40,7 +40,7 @@ public class MiaoshaController {
     MiaoshaService miaoshaService;
 
     /**
-     * QPS:539/507
+     * QPS:453
      * 5000 *  2
      */
     @RequestMapping("/do_miaosha")

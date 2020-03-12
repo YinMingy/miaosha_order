@@ -48,21 +48,23 @@ public class GoodsController {
     ThymeleafViewResolver thymeleafViewResolver;
 
     /**
-     * 未优化前： QPS——2102
+     * 未优化前： QPS——757
      * 5000 * 2
+     * 加缓存：QPS——1105
      */
     @RequestMapping(value = "/to_list",produces = "text/html")
     @ResponseBody
     public String toList(HttpServletRequest request, HttpServletResponse response,Model model, MiaoshaUser user){
 
-        model.addAttribute("user",user);
-        List<GoodsVo> goodsVos = goodsService.listGoodsVo();
-        model.addAttribute("goodsList",goodsVos);
-        //return "goods_list";
         String html = redisService.get(GoodsKey.getGoodsList, "", String.class);
         if(!StringUtils.isEmpty(html)){
             return html;
         }
+        model.addAttribute("user",user);
+        List<GoodsVo> goodsVos = goodsService.listGoodsVo();
+        model.addAttribute("goodsList",goodsVos);
+        //return "goods_list";
+
         WebContext ctx = new WebContext(request,response,request.getServletContext(),request.getLocale(),model.asMap());
         //手动渲染
         html = thymeleafViewResolver.getTemplateEngine().process("goods_list",ctx);
@@ -76,6 +78,10 @@ public class GoodsController {
     @ResponseBody
     public String detail(HttpServletRequest request, HttpServletResponse response,Model model, MiaoshaUser user, @PathVariable("goodsId") long goodsId){
 
+        String html = redisService.get(GoodsKey.getGoodsDetail, String.valueOf(goodsId), String.class);
+        if(!StringUtils.isEmpty(html)){
+            return html;
+        }
         model.addAttribute("user",user);
 
         GoodsVo goodsVo = goodsService.getGoodsByGoodsId(goodsId);
@@ -101,10 +107,7 @@ public class GoodsController {
         model.addAttribute("remainSeconds",remainSeconds);
 
         //return "goods_detail";
-        String html = redisService.get(GoodsKey.getGoodsDetail, String.valueOf(goodsId), String.class);
-        if(!StringUtils.isEmpty(html)){
-            return html;
-        }
+
         WebContext ctx = new WebContext(request,response,request.getServletContext(),request.getLocale(),model.asMap());
         //手动渲染
         html = thymeleafViewResolver.getTemplateEngine().process("goods_detail",ctx);
