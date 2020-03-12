@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163b0705-6c7b-4ad5-b298-1b0ac91d2529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/util/DBUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/util/UserUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/GoodsKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/UserArgumentResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/service/MiaoshaUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/service/MiaoshaUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/MiaoshaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/MiaoshaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -98,6 +92,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MainApplication">
+    <configuration name="GoodsController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cdut.miaosha.controller.GoodsController" />
+      <module name="miaosha_order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cdut.miaosha.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MD5Util" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cdut.miaosha.util.MD5Util" />
       <module name="miaosha_order" />
@@ -157,10 +164,12 @@
       <item itemvalue="Application.VaildatorUil" />
       <item itemvalue="Application.UserUtil" />
       <item itemvalue="Spring Boot.MainApplication" />
+      <item itemvalue="Application.GoodsController" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MainApplication" />
+        <item itemvalue="Application.GoodsController" />
         <item itemvalue="Application.UserUtil" />
         <item itemvalue="Application.MD5Util" />
         <item itemvalue="Application.VaildatorUil" />
@@ -224,6 +233,16 @@
       <workItem from="1582102285441" duration="622000" />
       <workItem from="1582507792371" duration="20232000" />
       <workItem from="1582693699198" duration="6548000" />
+      <workItem from="1582808111745" duration="787000" />
+      <workItem from="1582860771123" duration="1503000" />
+      <workItem from="1583215984871" duration="78000" />
+      <workItem from="1583287955119" duration="2519000" />
+      <workItem from="1583315576792" duration="136000" />
+      <workItem from="1583373192125" duration="670000" />
+      <workItem from="1583389861247" duration="1205000" />
+      <workItem from="1583812531803" duration="642000" />
+      <workItem from="1583907668458" duration="4754000" />
+      <workItem from="1583980298068" duration="3519000" />
     </task>
     <servers />
   </component>
@@ -231,14 +250,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582706165522">
+    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583982123861">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1582706165522" />
-    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1581746786379">
+    <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1583982123861" />
+    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser" timestamp="1583923472430">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1581746786379" />
+    <state x="26" y="69" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1583923472430" />
     <state x="0" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580198196956">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -247,54 +266,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581990261744" />
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom" timestamp="1582708832400">
+    <state width="1204" height="204" key="GridCell.Tab.0.bottom" timestamp="1583984106295">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582708832400" />
-    <state width="1238" height="228" key="GridCell.Tab.0.center" timestamp="1582708832399">
+    <state width="1204" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583984106295" />
+    <state width="1204" height="204" key="GridCell.Tab.0.center" timestamp="1583984106294">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582708832399" />
-    <state width="1238" height="228" key="GridCell.Tab.0.left" timestamp="1582708832399">
+    <state width="1204" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1583984106294" />
+    <state width="1204" height="204" key="GridCell.Tab.0.left" timestamp="1583984106294">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582708832399" />
-    <state width="1238" height="228" key="GridCell.Tab.0.right" timestamp="1582708832399">
+    <state width="1204" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1583984106294" />
+    <state width="1204" height="204" key="GridCell.Tab.0.right" timestamp="1583984106295">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="228" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582708832399" />
-    <state width="1238" height="202" key="GridCell.Tab.1.bottom" timestamp="1582708832376">
+    <state width="1204" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1583984106295" />
+    <state width="1204" height="204" key="GridCell.Tab.1.bottom" timestamp="1583984106296">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="202" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
-    <state width="1238" height="202" key="GridCell.Tab.1.center" timestamp="1582708832376">
+    <state width="1204" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583984106296" />
+    <state width="1204" height="204" key="GridCell.Tab.1.center" timestamp="1583984106295">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="202" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
-    <state width="1238" height="202" key="GridCell.Tab.1.left" timestamp="1582708832376">
+    <state width="1204" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1583984106295" />
+    <state width="1204" height="204" key="GridCell.Tab.1.left" timestamp="1583984106295">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="202" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
-    <state width="1238" height="202" key="GridCell.Tab.1.right" timestamp="1582708832376">
+    <state width="1204" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1583984106295" />
+    <state width="1204" height="204" key="GridCell.Tab.1.right" timestamp="1583984106295">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="202" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1582708832376" />
-    <state width="1238" height="225" key="GridCell.Tab.2.bottom" timestamp="1582533415879">
+    <state width="1204" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1583984106295" />
+    <state width="1204" height="204" key="GridCell.Tab.2.bottom" timestamp="1583984106296">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582533415879" />
-    <state width="1238" height="225" key="GridCell.Tab.2.center" timestamp="1582533415878">
+    <state width="1204" height="204" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1583984106296" />
+    <state width="1204" height="204" key="GridCell.Tab.2.center" timestamp="1583984106296">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
-    <state width="1238" height="225" key="GridCell.Tab.2.left" timestamp="1582533415878">
+    <state width="1204" height="204" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1583984106296" />
+    <state width="1204" height="204" key="GridCell.Tab.2.left" timestamp="1583984106296">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
-    <state width="1238" height="225" key="GridCell.Tab.2.right" timestamp="1582533415878">
+    <state width="1204" height="204" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1583984106296" />
+    <state width="1204" height="204" key="GridCell.Tab.2.right" timestamp="1583984106296">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="225" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1582533415878" />
+    <state width="1204" height="204" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1583984106296" />
     <state x="0" y="0" width="936" height="680" key="Maven.ArtifactSearchDialog" timestamp="1578899963186">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -340,6 +359,36 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/SampleController.java</url>
           <line>52</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
