@@ -4,6 +4,8 @@ import com.cdut.miaosha.dao.OrderDao;
 import com.cdut.miaosha.entity.MiaoshaOrder;
 import com.cdut.miaosha.entity.MiaoshaUser;
 import com.cdut.miaosha.entity.OrderInfo;
+import com.cdut.miaosha.redis.OrderKey;
+import com.cdut.miaosha.redis.RedisService;
 import com.cdut.miaosha.vo.GoodsVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,10 +24,18 @@ public class OrderService {
     @Autowired
     OrderDao orderDao;
 
+    @Autowired
+    RedisService redisService;
+
     public MiaoshaOrder getMiaoshaOrderByUserIdGoodsId(long userId, long goodsId) {
 
-        return orderDao.getMiaoshaOrderByUserIdGoodsId(userId,goodsId);
+        //return orderDao.getMiaoshaOrderByUserIdGoodsId(userId,goodsId);
+        return redisService.get(OrderKey.getMiaoshaOrderByUidGid,""+userId+"_"+goodsId,MiaoshaOrder.class);
 
+    }
+
+    public OrderInfo getOrderById(long orderId) {
+        return orderDao.getOrderById(orderId);
     }
 
     @Transactional
@@ -50,6 +60,8 @@ public class OrderService {
         miaoshaOrder.setOrderId(orderId);
         orderDao.insertMiaoshaOrder(miaoshaOrder);
 
+        redisService.set(OrderKey.getMiaoshaOrderByUidGid,""+user.getId()+"_"+goodsVo.getId(),miaoshaOrder);
         return orderInfo;
     }
+
 }

@@ -3,8 +3,10 @@ package com.cdut.miaosha.controller;
 import com.cdut.miaosha.entity.MiaoshaUser;
 import com.cdut.miaosha.redis.GoodsKey;
 import com.cdut.miaosha.redis.RedisService;
+import com.cdut.miaosha.result.Result;
 import com.cdut.miaosha.service.GoodsService;
 import com.cdut.miaosha.service.MiaoshaUserService;
+import com.cdut.miaosha.vo.GoodsDetailVo;
 import com.cdut.miaosha.vo.GoodsVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -118,5 +120,37 @@ public class GoodsController {
 
     }
 
+    @RequestMapping(value = "/detail/{goodsId}")
+    @ResponseBody
+    public Result<GoodsDetailVo> detail2(HttpServletRequest request, HttpServletResponse response, Model model, MiaoshaUser user, @PathVariable("goodsId") long goodsId){
+
+        GoodsVo goodsVo = goodsService.getGoodsByGoodsId(goodsId);
+
+        System.out.println(goodsVo.getStartDate());
+        int miaoShaStatus = 0;
+        int remainSeconds = 0;
+        long startAt = goodsVo.getStartDate().getTime();
+        long endAt = goodsVo.getEndDate().getTime();
+        long nowTime = System.currentTimeMillis();
+        if(nowTime < startAt){//秒杀未开始，倒计时
+            miaoShaStatus = 0;
+            remainSeconds = (int)(startAt-nowTime)/1000;
+        }else if(nowTime > endAt){//秒杀已结束
+            miaoShaStatus = 2;
+            remainSeconds = -1;
+        }else{//秒杀正在进行中
+            miaoShaStatus = 1;
+            remainSeconds = 0;
+        }
+
+        GoodsDetailVo vo = new GoodsDetailVo();
+        vo.setGoods(goodsVo);
+        vo.setUser(user);
+        vo.setMiaoShaStatus(miaoShaStatus);
+        vo.setRemainSeconds(remainSeconds);
+
+        return Result.success(vo);
+
+    }
 
 }
