@@ -1,6 +1,7 @@
 package com.cdut.miaosha.controller;
 
 import com.cdut.miaosha.entity.User;
+import com.cdut.miaosha.rabbitmq.MQSender;
 import com.cdut.miaosha.redis.RedisService;
 import com.cdut.miaosha.redis.UserKey;
 import com.cdut.miaosha.result.Result;
@@ -27,11 +28,42 @@ public class SampleController {
     @Autowired
     RedisService redisService;
 
+    @Autowired
+    MQSender sender;
+
     @RequestMapping("/thymeleaf")
     public String thymeleaf(Model model){
         model.addAttribute("name","yinmy");
         return "hello";
     }
+    @RequestMapping("/mq")
+    @ResponseBody
+    public Result<String> mq(){
+        sender.send("hello world");
+        return Result.success("dddd");
+    }
+
+    @RequestMapping("/mq/topic")
+    @ResponseBody
+    public Result<String> mqTopic(){
+        sender.sendTopic("hello world");
+        return Result.success("dddd");
+    }
+
+    //swagger
+    @RequestMapping("/mq/fanout")
+    @ResponseBody
+    public Result<String> mqFanout(){
+        sender.sendFanout("hello world");
+        return Result.success("dddd");
+    }
+    @RequestMapping("/mq/header")
+    @ResponseBody
+    public Result<String> mqHeader(){
+        sender.sendHeader("hello world");
+        return Result.success("dddd");
+    }
+
     @RequestMapping("/db/get")
     @ResponseBody
     public Result<User> doGet(){
