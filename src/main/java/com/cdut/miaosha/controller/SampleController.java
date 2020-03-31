@@ -36,7 +36,7 @@ public class SampleController {
         model.addAttribute("name","yinmy");
         return "hello";
     }
-    @RequestMapping("/mq")
+    /*@RequestMapping("/mq")
     @ResponseBody
     public Result<String> mq(){
         sender.send("hello world");
@@ -62,7 +62,7 @@ public class SampleController {
     public Result<String> mqHeader(){
         sender.sendHeader("hello world");
         return Result.success("dddd");
-    }
+    }*/
 
     @RequestMapping("/db/get")
     @ResponseBody

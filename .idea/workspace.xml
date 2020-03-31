@@ -2,17 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163b0705-6c7b-4ad5-b298-1b0ac91d2529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MiaoshaMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/MiaoshaKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/MiaoshaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/MiaoshaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/SampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/GoodsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/OrderDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/GoodsKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/GoodsKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/SampleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/SampleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/redis/RedisService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/redis/RedisService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +223,9 @@
       <workItem from="1585302886530" duration="1176000" />
       <workItem from="1585388278947" duration="2863000" />
       <workItem from="1585454667711" duration="6109000" />
+      <workItem from="1585541511547" duration="9909000" />
+      <workItem from="1585577657054" duration="1139000" />
+      <workItem from="1585638503668" duration="3867000" />
     </task>
     <servers />
   </component>
@@ -226,10 +237,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="151" y="0" width="1086" height="680" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1584326773556" />
-    <state x="26" y="68" key="#com.intellij.ide.util.MemberChooser" timestamp="1585228129865">
+    <state x="26" y="68" key="#com.intellij.ide.util.MemberChooser" timestamp="1585574776861">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="26" y="68" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1585228129865" />
+    <state x="26" y="68" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1585574776861" />
     <state x="0" y="182" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580198196956">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -238,38 +249,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581990261744" />
-    <state width="1238" height="120" key="GridCell.Tab.0.bottom" timestamp="1585470729568">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1585642112906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585470729568" />
-    <state width="1238" height="120" key="GridCell.Tab.0.center" timestamp="1585470729562">
+    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
+    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1585642112905">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585470729562" />
-    <state width="1238" height="120" key="GridCell.Tab.0.left" timestamp="1585470729562">
+    <state width="1238" height="148" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585642112905" />
+    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1585642112905">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585470729562" />
-    <state width="1238" height="120" key="GridCell.Tab.0.right" timestamp="1585470729566">
+    <state width="1238" height="148" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585642112905" />
+    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1585642112906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585470729566" />
-    <state width="1238" height="120" key="GridCell.Tab.1.bottom" timestamp="1585470729568">
+    <state width="1238" height="148" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
+    <state width="1238" height="148" key="GridCell.Tab.1.bottom" timestamp="1585642112907">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585470729568" />
-    <state width="1238" height="120" key="GridCell.Tab.1.center" timestamp="1585470729568">
+    <state width="1238" height="148" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585642112907" />
+    <state width="1238" height="148" key="GridCell.Tab.1.center" timestamp="1585642112906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1585470729568" />
-    <state width="1238" height="120" key="GridCell.Tab.1.left" timestamp="1585470729568">
+    <state width="1238" height="148" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
+    <state width="1238" height="148" key="GridCell.Tab.1.left" timestamp="1585642112906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1585470729568" />
-    <state width="1238" height="120" key="GridCell.Tab.1.right" timestamp="1585470729568">
+    <state width="1238" height="148" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
+    <state width="1238" height="148" key="GridCell.Tab.1.right" timestamp="1585642112907">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="120" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1585470729568" />
+    <state width="1238" height="148" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1585642112907" />
     <state width="1204" height="132" key="GridCell.Tab.2.bottom" timestamp="1584003532762">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -322,9 +333,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1580196806345" />
-    <state x="784" y="6" width="672" height="678" key="search.everywhere.popup" timestamp="1584001267064">
+    <state x="786" y="6" width="672" height="678" key="search.everywhere.popup" timestamp="1585638985376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="784" y="6" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1584001267064" />
+    <state x="786" y="6" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1585638985376" />
   </component>
 </project>
