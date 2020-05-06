@@ -1,5 +1,6 @@
 package com.cdut.miaosha.config;
 
+import com.cdut.miaosha.annotation.access.UserContext;
 import com.cdut.miaosha.entity.MiaoshaUser;
 import com.cdut.miaosha.service.MiaoshaUserService;
 import com.mysql.cj.util.StringUtils;
@@ -30,31 +31,11 @@ public class UserArgumentResolver implements HandlerMethodArgumentResolver {
         return clazz==MiaoshaUser.class;
     }
 
+    @Override
     public Object resolveArgument(MethodParameter parameter, ModelAndViewContainer mavContainer,
                                   NativeWebRequest webRequest, WebDataBinderFactory binderFactory) throws Exception {
-        HttpServletRequest request = webRequest.getNativeRequest(HttpServletRequest.class);
-        HttpServletResponse response = webRequest.getNativeResponse(HttpServletResponse.class);
 
-        String paramToken = request.getParameter(MiaoshaUserService.COOKIE_NAME_TOKEN);
-        String cookieToken = getCookieValue(request, MiaoshaUserService.COOKIE_NAME_TOKEN);
-        if(StringUtils.isNullOrEmpty(cookieToken) && StringUtils.isNullOrEmpty(paramToken)) {
-            return null;
-        }
-        String token = StringUtils.isNullOrEmpty(paramToken)?cookieToken:paramToken;
-        return userService.getByToken(response, token);
-    }
-
-    private String getCookieValue(HttpServletRequest request, String cookiName) {
-        Cookie[]  cookies = request.getCookies();
-        if(cookies == null || cookies.length == 0){
-            return null;
-        }
-        for(Cookie cookie : cookies) {
-            if(cookie.getName().equals(cookiName)) {
-                return cookie.getValue();
-            }
-        }
-        return null;
+     return UserContext.getUser();
     }
 
 }

@@ -2,24 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163b0705-6c7b-4ad5-b298-1b0ac91d2529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MiaoshaMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/MiaoshaKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/Interceptor/AccessInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/annotation/access/AccessLimit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/annotation/access/UserContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/AccessKey.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/UserArgumentResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/UserArgumentResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/MiaoshaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/MiaoshaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/SampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/SampleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/GoodsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQReceiver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/rabbitmq/MQSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/GoodsKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/GoodsKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/MiaoshaKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/redis/MiaoshaKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/result/CodeMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/result/CodeMsg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/MiaoshaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/goods_detail.htm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/SampleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/SampleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/result/CodeMsg.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cdut/miaosha/result/CodeMsg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/goods_detail.htm" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +43,7 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -94,7 +92,7 @@
     <property name="ToolWindowMaven.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/cdut/miaosha/Interceptor" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -104,16 +102,45 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cdut.miaosha.redis" />
       <recent name="com.cdut.miaosha.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IdeaProject\miaosha_order\src\main\java\com\cdut\miaosha\Interceptor" />
       <recent name="E:\IdeaProject\miaosha_order\src\main\resources\static" />
       <recent name="E:\IdeaProject\miaosha_order\src\main\java\com\cdut\miaosha\util" />
       <recent name="E:\IdeaProject\miaosha_order\src\main\resources\template" />
       <recent name="E:\IdeaProject\miaosha_order\src\main\resources" />
     </key>
   </component>
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 17 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 17 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="miaosha_order" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="RunManager" selected="Spring Boot.MainApplication">
+    <configuration name="MiaoshaService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.cdut.miaosha.service.MiaoshaService" />
+      <module name="miaosha_order" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.cdut.miaosha.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.cdut.miaosha.util.UserUtil" />
       <module name="miaosha_order" />
@@ -145,6 +172,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.MainApplication" />
+        <item itemvalue="Application.MiaoshaService" />
         <item itemvalue="Application.UserUtil" />
       </list>
     </recent_temporary>
@@ -226,6 +254,20 @@
       <workItem from="1585541511547" duration="9909000" />
       <workItem from="1585577657054" duration="1139000" />
       <workItem from="1585638503668" duration="3867000" />
+      <workItem from="1585744570379" duration="40000" />
+      <workItem from="1585996059979" duration="1755000" />
+      <workItem from="1586003425421" duration="415000" />
+      <workItem from="1586003926014" duration="30000" />
+      <workItem from="1586314191306" duration="9025000" />
+      <workItem from="1586334430375" duration="5436000" />
+      <workItem from="1586402330098" duration="9000" />
+      <workItem from="1586433397688" duration="6948000" />
+      <workItem from="1586488614954" duration="6462000" />
+      <workItem from="1586568415779" duration="2631000" />
+      <workItem from="1587004803144" duration="2137000" />
+      <workItem from="1587960262651" duration="564000" />
+      <workItem from="1588149304257" duration="1832000" />
+      <workItem from="1588495569000" duration="2001000" />
     </task>
     <servers />
   </component>
@@ -249,62 +291,54 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="99" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1581990261744" />
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom" timestamp="1585642112906">
+    <state width="1238" height="124" key="GridCell.Tab.0.bottom" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
-    <state width="1238" height="148" key="GridCell.Tab.0.center" timestamp="1585642112905">
+    <state width="1238" height="124" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="124" key="GridCell.Tab.0.center" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585642112905" />
-    <state width="1238" height="148" key="GridCell.Tab.0.left" timestamp="1585642112905">
+    <state width="1238" height="124" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="124" key="GridCell.Tab.0.left" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585642112905" />
-    <state width="1238" height="148" key="GridCell.Tab.0.right" timestamp="1585642112906">
+    <state width="1238" height="124" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="124" key="GridCell.Tab.0.right" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
-    <state width="1238" height="148" key="GridCell.Tab.1.bottom" timestamp="1585642112907">
+    <state width="1238" height="124" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="124" key="GridCell.Tab.1.bottom" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585642112907" />
-    <state width="1238" height="148" key="GridCell.Tab.1.center" timestamp="1585642112906">
+    <state width="1238" height="124" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="124" key="GridCell.Tab.1.center" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
-    <state width="1238" height="148" key="GridCell.Tab.1.left" timestamp="1585642112906">
+    <state width="1238" height="124" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="124" key="GridCell.Tab.1.left" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1585642112906" />
-    <state width="1238" height="148" key="GridCell.Tab.1.right" timestamp="1585642112907">
+    <state width="1238" height="124" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="124" key="GridCell.Tab.1.right" timestamp="1588520996374">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1238" height="148" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1585642112907" />
-    <state width="1204" height="132" key="GridCell.Tab.2.bottom" timestamp="1584003532762">
+    <state width="1238" height="124" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1588520996374" />
+    <state width="1238" height="186" key="GridCell.Tab.2.bottom" timestamp="1586571055770">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1204" height="132" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1584003532762" />
-    <state width="1204" height="132" key="GridCell.Tab.2.center" timestamp="1584003532762">
+    <state width="1238" height="186" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1586571055770" />
+    <state width="1238" height="186" key="GridCell.Tab.2.center" timestamp="1586571055769">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1204" height="132" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1584003532762" />
-    <state width="1204" height="132" key="GridCell.Tab.2.left" timestamp="1584003532762">
+    <state width="1238" height="186" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1586571055769" />
+    <state width="1238" height="186" key="GridCell.Tab.2.left" timestamp="1586571055769">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1204" height="132" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1584003532762" />
-    <state width="1204" height="132" key="GridCell.Tab.2.right" timestamp="1584003532762">
+    <state width="1238" height="186" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1586571055769" />
+    <state width="1238" height="186" key="GridCell.Tab.2.right" timestamp="1586571055769">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1204" height="132" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1584003532762" />
-    <state x="0" y="0" width="936" height="680" key="Maven.ArtifactSearchDialog" timestamp="1578899963186">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="0" y="0" width="936" height="680" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1578899963186" />
-    <state x="379" y="194" key="MavenRunHelper.GoalEditor" timestamp="1579160123997">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="379" y="194" key="MavenRunHelper.GoalEditor/0.0.1280.680@0.0.1280.680" timestamp="1579160123997" />
+    <state width="1238" height="186" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1586571055769" />
     <state x="353" y="59" key="MultipleFileMergeDialog" timestamp="1583987519070">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -317,10 +351,6 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="439" y="259" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1580195202079" />
-    <state x="0" y="0" key="com.intellij.troubleshooting.ui.CollectTroubleshootingInformationDialog" timestamp="1578993326022">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="0" y="0" key="com.intellij.troubleshooting.ui.CollectTroubleshootingInformationDialog/0.0.1280.680@0.0.1280.680" timestamp="1578993326022" />
     <state x="409" y="57" key="git4idea.branch.GitSmartOperationDialog" timestamp="1583987509413">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -333,9 +363,45 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="0" y="0" key="refactoring.ChangeSignatureDialog/0.0.1280.680@0.0.1280.680" timestamp="1580196806345" />
-    <state x="786" y="6" width="672" height="678" key="search.everywhere.popup" timestamp="1585638985376">
+    <state x="787" y="7" width="672" height="678" key="search.everywhere.popup" timestamp="1586002726660">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="786" y="6" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1585638985376" />
+    <state x="787" y="7" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1586002726660" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/controller/GoodsController.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/Interceptor/AccessInterceptor.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cdut/miaosha/Interceptor/AccessInterceptor.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

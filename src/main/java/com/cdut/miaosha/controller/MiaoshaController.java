@@ -1,21 +1,22 @@
 package com.cdut.miaosha.controller;
 
+import com.cdut.miaosha.annotation.access.AccessLimit;
 import com.cdut.miaosha.entity.MiaoshaOrder;
 import com.cdut.miaosha.entity.MiaoshaUser;
 import com.cdut.miaosha.entity.OrderInfo;
 import com.cdut.miaosha.rabbitmq.MQSender;
 import com.cdut.miaosha.rabbitmq.MiaoshaMessage;
-import com.cdut.miaosha.redis.GoodsKey;
-import com.cdut.miaosha.redis.MiaoshaKey;
-import com.cdut.miaosha.redis.OrderKey;
-import com.cdut.miaosha.redis.RedisService;
+import com.cdut.miaosha.redis.*;
 import com.cdut.miaosha.result.CodeMsg;
 import com.cdut.miaosha.result.Result;
 import com.cdut.miaosha.service.GoodsService;
 import com.cdut.miaosha.service.MiaoshaService;
 import com.cdut.miaosha.service.MiaoshaUserService;
 import com.cdut.miaosha.service.OrderService;
+import com.cdut.miaosha.util.MD5Util;
+import com.cdut.miaosha.util.UUIDUtil;
 import com.cdut.miaosha.vo.GoodsVo;
+import com.sun.org.apache.bcel.internal.classfile.Code;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
@@ -24,6 +25,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.imageio.ImageIO;
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -81,13 +89,18 @@ public class MiaoshaController implements InitializingBean {
      * GET 幂等
      * POST 向服务端提交数据
      */
-    @RequestMapping(value = "/do_miaosha",method = RequestMethod.POST)
+    @RequestMapping(value = "/{path}/do_miaosha",method = RequestMethod.POST)
     @ResponseBody
-    public Result<Integer> miaosha(Model model, MiaoshaUser user, @RequestParam("goodsId")long goodsId){
+    public Result<Integer> miaosha(Model model, MiaoshaUser user, @RequestParam("goodsId")long goodsId,@PathVariable("path")String path){
         model.addAttribute("user",user);
 
         if(user == null){
             return Result.error(CodeMsg.SESSION_ERROR);
+        }
+        //验证Path
+        boolean checkPath = miaoshaService.checkPath(user,goodsId,path);
+        if(!checkPath){
+            return Result.error(CodeMsg.REQUEST_ILLEGAL);
         }
         //内存标记,减少内存标记
         Boolean isOver = localOverMap.get(goodsId);
@@ -165,4 +178,43 @@ public class MiaoshaController implements InitializingBean {
         miaoshaService.reset(goodsList);
         return Result.success(true);
     }
+    @AccessLimit(seconds = 5,maxCount = 5,needLogin = true)
+    @RequestMapping(value = "/path",method = RequestMethod.GET)
+    @ResponseBody
+    public Result<String> getMiaoshaPath(HttpServletRequest request,MiaoshaUser user,
+                                         @RequestParam("goodsId")long goodsId, @RequestParam(value = "verifyCode",defaultValue = "0")int verifyCode) {
+        if (user == null) {
+            return Result.error(CodeMsg.SESSION_ERROR);
+        }
+        // 检查验证码
+        boolean check = miaoshaService.checkVerifyCode(user,goodsId,verifyCode);
+        if(!check){
+            return Result.error(CodeMsg.MIAOSHA_VERIFY_CODE_ERROR);
+        }
+        String path = miaoshaService.creatPath(user,goodsId);
+        return Result.success(path);
+    }
+
+    @RequestMapping(value = "/verifyCode",method = RequestMethod.GET)
+    @ResponseBody
+    public Result<String> getVerifyCode(HttpServletResponse response,Model model, MiaoshaUser user, @RequestParam("goodsId")long goodsId) {
+
+        if (user == null) {
+            return Result.error(CodeMsg.SESSION_ERROR);
+        }
+
+        BufferedImage image = miaoshaService.creatVerifyCode(user,goodsId);
+        try{
+            OutputStream out = response.getOutputStream();
+            ImageIO.write(image,"JPEG",out);
+            out.flush();
+            out.close();
+            return null;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return Result.error(CodeMsg.MIAOSHA_FAIL);
+
+        }
+    }
+
 }

@@ -47,7 +47,14 @@ public class LoginController {
         return "login";
     }
 
-    @RequestMapping("/callback")
+    @RequestMapping("/do_login")
+    @ResponseBody
+    public Result<String> doLogin(HttpServletResponse response,@Valid LoginVo loginVo){
+
+        String token = miaoshaUserService.login(response,loginVo);
+        return Result.success(token);
+
+    } @RequestMapping("/callback")
     @ResponseBody
     public String callback(HttpServletRequest request,HttpServletResponse response){// @Valid LoginVo loginVo) Result<Boolean>
 
@@ -78,15 +85,6 @@ public class LoginController {
             e.printStackTrace();
         }
         return "登录失败";
-    }
-
-    @RequestMapping("/do_login")
-    @ResponseBody
-    public Result<String> doLogin(HttpServletResponse response,@Valid LoginVo loginVo){
-
-        String token = miaoshaUserService.login(response,loginVo);
-        return Result.success(token);
-
     }
 
     private static String getResultByHttp(String sendUrl, String param)
